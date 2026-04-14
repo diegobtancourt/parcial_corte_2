@@ -36,9 +36,9 @@ class Pila {
 // Pruebas
 const pila = new Pila();
 
-pila.agregar({ Nombre: "Orlando", Edad: 30 });
-pila.agregar({ Nombre: "Laura", Edad: 25 });
-pila.agregar({ Nombre: "Carlos", Edad: 22 });
+pila.agregar({ Nombre: "Andres", Edad: 30 });
+pila.agregar({ Nombre: "Maria", Edad: 25 });
+pila.agregar({ Nombre: "Daniel", Edad: 22 });
 
 pila.verTope();
 
