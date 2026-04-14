@@ -3,56 +3,46 @@ class Pila {
     this.elementos = [];
   }
 
-  // Agregar elemento al tope de la pila (push)
   agregar(objeto) {
     this.elementos.push(objeto);
-    console.log("Elemento agregado a la pila:" , objeto);
+    console.log("Elemento agregado:", objeto);
     console.log("Pila actual:", this.elementos);
-    console.log("-----------------------------------");
   }
 
-  // Eliminar elemento del tope de la pila (pop)
   eliminar() {
-    if (this.estaVacia()) {
-      console.log("La pila está vacía. No se puede eliminar.");
+    if (this.elementos.length === 0) {
+      console.log("La pila esta vacia. No se puede eliminar.");
       return null;
     }
     const eliminado = this.elementos.pop();
-    console.log("Elemento eliminado del tope:", eliminado);
+    console.log("Elemento eliminado:", eliminado);
     console.log("Pila actual:", this.elementos);
-    console.log("-----------------------------------");
     return eliminado;
   }
 
-  tope() {
-    if (this.estaVacia()) {
-      console.log("La pila está vacía.");
+  verTope() {
+    if (this.elementos.length === 0) {
+      console.log("La pila esta vacia.");
       return null;
     }
     console.log("Tope de la pila:", this.elementos[this.elementos.length - 1]);
-    return this.elementos[this.elementos.length - 1];
   }
 
-  estaVacia() {
-    return this.elementos.length === 0;
-  }
-
-  tamano() {
-    console.log("Tamaño de la pila: ${this.elementos.length}");
-    return this.elementos.length;
+  mostrarPila() {
+    console.log("Pila completa:", this.elementos);
   }
 }
 
+// Pruebas
 const pila = new Pila();
 
-pila.agregar({ Nombre: "Daniel", Edad: 30 });
-pila.agregar({ Nombre: "Vanessa",   Edad: 25 });
-pila.agregar({ Nombre: "David",  Edad: 22 });
+pila.agregar({ Nombre: "Orlando", Edad: 30 });
+pila.agregar({ Nombre: "Laura", Edad: 25 });
+pila.agregar({ Nombre: "Carlos", Edad: 22 });
 
-pila.tope();
-pila.tamano();
+pila.verTope();
 
 pila.eliminar();
 pila.eliminar();
 
-pila.tamano();
+pila.mostrarPila();
